@@ -796,7 +796,7 @@ public class PushNotificationManager {
 
 		/* Device token (shortened), Identifier and expiry */
 		int l = useEnhancedNotificationFormat ? 4 : 8;
-		alert.append("" + deviceToken.substring(0, l) + "É" + deviceToken.substring(64 - l, 64) + (useEnhancedNotificationFormat ? " [Id:" + identifier + "] " + (payload.getExpiry() <= 0 ? "No-store" : "Exp:T+" + payload.getExpiry()) : "") + "\n");
+		alert.append("" + deviceToken.substring(0, l) + "E" + deviceToken.substring(64 - l, 64) + (useEnhancedNotificationFormat ? " [Id:" + identifier + "] " + (payload.getExpiry() <= 0 ? "No-store" : "Exp:T+" + payload.getExpiry()) : "") + "\n");
 
 		/* Format & encoding */
 		alert.append((useEnhancedNotificationFormat ? "Enhanced" : "Simple") + " format / " + payload.getCharacterEncoding() + "" + "");
