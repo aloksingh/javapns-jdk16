@@ -243,7 +243,6 @@ public class NotificationThread implements Runnable, PushQueue {
                 }
 			}
 			notificationManager.stopConnection();
-            connectionStartTime = System.currentTimeMillis();
 		} catch (KeystoreException e) {
 			this.exception = e;
 			if (listener != null) listener.eventCriticalException(this, e);
